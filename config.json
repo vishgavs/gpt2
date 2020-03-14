@@ -2,7 +2,6 @@
   "activation_dropout": 0.0,
   "architectures": null,
   "attention_dropout": 0.0,
-  "bos_token_id": 0,
   "classif_dropout": 0.0,
   "d_model": 1024,
   "decoder_attention_heads": 16,
@@ -15,10 +14,6 @@
   "encoder_ffn_dim": 4096,
   "encoder_layerdrop": 0.0,
   "encoder_layers": 12,
-  "eos_token_id": 2,
-  "eos_token_ids": [
-    2
-  ],
   "finetuning_task": null,
   "id2label": {
     "0": "LABEL_0",
@@ -43,7 +38,6 @@
   "output_attentions": false,
   "output_hidden_states": false,
   "output_past": true,
-  "pad_token_id": 1,
   "pruned_heads": {},
   "repetition_penalty": 1.0,
   "temperature": 1.0,
