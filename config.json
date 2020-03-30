@@ -45,6 +45,7 @@
   "output_hidden_states": false,
   "output_past": true,
   "pad_token_id": 1,
+  "prefix": " ",
   "pruned_heads": {},
   "repetition_penalty": 1.0,
   "temperature": 1.0,
