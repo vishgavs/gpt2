@@ -26,11 +26,9 @@ You can use this model for text summarization.
 Here is how to use this model with the [pipeline API](https://huggingface.co/transformers/main_classes/pipelines.html):
 
 ```python
-from transformers import BartTokenizer, BartForConditionalGeneration, pipeline
+from transformers import pipeline
 
-tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
-model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
-summarizer = pipeline("summarization", model=model, tokenizer=tokenizer)
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 ARTICLE = """ New York (CNN)When Liana Barrientos was 23 years old, she got married in Westchester County, New York.
 A year later, she got married again in Westchester County, but to a different man and without divorcing her first husband.
@@ -50,7 +48,6 @@ Investigation Division. Seven of the men are from so-called "red-flagged" countr
 Her eighth husband, Rashid Rajput, was deported in 2006 to his native Pakistan after an investigation by the Joint Terrorism Task Force.
 If convicted, Barrientos faces up to four years in prison.  Her next court appearance is scheduled for May 18.
 """
-
 print(summarizer(ARTICLE, max_length=130, min_length=30, do_sample=False))
 >>> [{'summary_text': 'Liana Barrientos, 39, is charged with two counts of "offering a false instrument for filing in the first degree" In total, she has been married 10 times, with nine of her marriages occurring between 1999 and 2002. She is believed to still be married to four men.'}]
 ```
