@@ -1,9 +1,44 @@
 ---
 tags:
 - summarization
-
 license: mit
 thumbnail: https://huggingface.co/front/thumbnails/facebook.png
+model-index:
+- name: facebook/bart-large-cnn
+  results:
+  - task:
+      type: summarization
+      name: Summarization
+    dataset:
+      name: cnn_dailymail
+      type: cnn_dailymail
+      config: 3.0.0
+      split: train
+    metrics:
+    - name: ROUGE-1
+      type: rouge
+      value: 42.9486
+      verified: true
+    - name: ROUGE-2
+      type: rouge
+      value: 20.8149
+      verified: true
+    - name: ROUGE-L
+      type: rouge
+      value: 30.6186
+      verified: true
+    - name: ROUGE-LSUM
+      type: rouge
+      value: 40.0376
+      verified: true
+    - name: loss
+      type: loss
+      value: 2.529000997543335
+      verified: true
+    - name: gen_len
+      type: gen_len
+      value: 78.5866
+      verified: true
 ---
 # BART (large-sized model), fine-tuned on CNN Daily Mail 
 
