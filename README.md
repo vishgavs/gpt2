@@ -5,6 +5,8 @@ tags:
 - summarization
 license: mit
 thumbnail: https://huggingface.co/front/thumbnails/facebook.png
+datasets:
+- cnn_dailymail
 model-index:
 - name: facebook/bart-large-cnn
   results:
